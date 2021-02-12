@@ -27,6 +27,12 @@ public class CepRange {
 		faixa_fim = fAIXA_FIM;
 	}
 
+	
+	/*
+	 * A FONTE SAIU UM POUCO ESTRANHA POR CAUSA DE UM BUG DO IDE, VOU RESOLVER ISSO.
+	 */
+	
+	
 	public CepRange() {
 	}
 	
