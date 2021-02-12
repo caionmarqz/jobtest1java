@@ -1,6 +1,5 @@
 package com.teste.utils;
 
-import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +50,27 @@ public class BusinessLogic {
 		repository.save(loja1);
 		return loja1;
 	}
+	/*
 
+	public void removeFaixa(long faixa) {
+		List<Loja> lojas = repository.findAll();
+		for (long i=0; i<lojas.size(); i++) {
+			List<CepRange> tmp = lojas.get((int) i).getFaixas();
+			int j = 0;
+			for (j=0; j<tmp.size(); j++) {
+				if ((tmp.get(j).getFAIXA_INICIO()<faixa) && (tmp.get(j).getFAIXA_FIM()>faixa))
+				{
+					Loja tmpx = lojas.get((int) i);
+				    
+				}
+				
+			}
+		}
+	}
+	
+	*/		
+	
+	
+	
 	
 }

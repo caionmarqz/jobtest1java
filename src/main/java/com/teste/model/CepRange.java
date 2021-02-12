@@ -1,5 +1,6 @@
 package com.teste.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,23 +15,17 @@ public class CepRange {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@Column("ID")
 	long id;
+//	@Column("CODIGO_LOJA")
 	long codigo_loja;
+//	@Column("FAIXA_INICIO")
 	int faixa_inicio;
+//	@Column("FAIXA_FIM")
 	int faixa_fim;
 
-	public CepRange(long id, long cODIGO_LOJA, int fAIXA_INICIO, int fAIXA_FIM) {
-		super();
-		this.id = id;
-		codigo_loja = cODIGO_LOJA;
-		faixa_inicio = fAIXA_INICIO;
-		faixa_fim = fAIXA_FIM;
-	}
-
 	
-	/*
-	 * A FONTE SAIU UM POUCO ESTRANHA POR CAUSA DE UM BUG DO IDE, VOU RESOLVER ISSO.
-	 */
+
 	
 	
 	public CepRange() {

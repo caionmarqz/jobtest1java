@@ -46,6 +46,10 @@ public class Loja {
 		return faixas;
 	}
 	
+	public boolean delFaixa(CepRange faixa) {
+		return faixas.remove(faixa);
+	}
+	
 	public CepRange getFaixa(int _id) {
 		return faixas.get(_id);
 	}	
