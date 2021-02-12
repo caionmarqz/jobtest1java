@@ -1,29 +1,31 @@
 package com.teste.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
+
+@Entity(name = "Loja")
 @Table(name="loja")
 public class Loja {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
-	String nome;
 	
-	@OneToMany(targetEntity=faixas.class, mappedBy="faixas", fetch=FetchType.EAGER)
-	List<CepRange> faixas;
+	String nome;
+
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	List<CepRange> faixas = new ArrayList<>();
 
 	public Loja () {
-		//faixas = new List<CepRange>();
 	}
 	
 	public long getId() {

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@Entity
+@Entity(name = "CepRange")
 @Table(name="cepranges")
 public class CepRange {
 	
@@ -15,16 +15,16 @@ public class CepRange {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
-	long CODIGO_LOJA;
-	int FAIXA_INICIO;
-	int FAIXA_FIM;
+	long codigo_loja;
+	int faixa_inicio;
+	int faixa_fim;
 
 	public CepRange(long id, long cODIGO_LOJA, int fAIXA_INICIO, int fAIXA_FIM) {
-		//super();
+		super();
 		this.id = id;
-		CODIGO_LOJA = cODIGO_LOJA;
-		FAIXA_INICIO = fAIXA_INICIO;
-		FAIXA_FIM = fAIXA_FIM;
+		codigo_loja = cODIGO_LOJA;
+		faixa_inicio = fAIXA_INICIO;
+		faixa_fim = fAIXA_FIM;
 	}
 
 	public CepRange() {
@@ -37,21 +37,21 @@ public class CepRange {
 		this.id = id;
 	}
 	public long getCODIGO_LOJA() {
-		return CODIGO_LOJA;
+		return codigo_loja;
 	}
 	public void setCODIGO_LOJA(long cODIGO_LOJA) {
-		CODIGO_LOJA = cODIGO_LOJA;
+		codigo_loja = cODIGO_LOJA;
 	}
 	public int getFAIXA_INICIO() {
-		return FAIXA_INICIO;
+		return faixa_inicio;
 	}
 	public void setFAIXA_INICIO(int fAIXA_INICIO) {
-		FAIXA_INICIO = fAIXA_INICIO;
+		faixa_inicio = fAIXA_INICIO;
 	}
 	public int getFAIXA_FIM() {
-		return FAIXA_FIM;
+		return faixa_fim;
 	}
 	public void setFAIXA_FIM(int fAIXA_FIM) {
-		FAIXA_FIM = fAIXA_FIM;
+		faixa_fim = fAIXA_FIM;
 	}
 }
